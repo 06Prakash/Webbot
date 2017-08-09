@@ -1,4 +1,4 @@
-package WebTestFramework.Webbot;
+package Tests;
 
 import java.io.IOException;
 
@@ -6,10 +6,10 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import pageObjects.LandingPage;
-import resources.base;
+import PageObject.LandingPage;
+import ui_automation.hawk.TestBase;
 
-public class ValidateUrl extends base {
+public class ValidateUrl extends TestBase {
 
 	@BeforeTest
 	public void initialize() throws IOException {
@@ -25,7 +25,14 @@ public class ValidateUrl extends base {
 		if (actual.equals("Google")) {
 			System.out.println("Looks fine");
 		}
-//		driver.close();
+		// driver.close();
+	}
+
+	@AfterTest
+	public void teardown() throws IOException {
+		// Take screen shots
+		TestBase.getScreenshot("HomePage");
+		driver.close();
 	}
 
 }
