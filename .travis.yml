@@ -1,3 +1,5 @@
 language: java
 sudo: false
+addons:
+  chrome: stable
 script: mvn clean verify
