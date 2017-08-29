@@ -9,6 +9,7 @@
 
 	<name>Webbot</name>
 	<url>http://maven.apache.org</url>
+	
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,7 +29,13 @@
 			</plugin>
 		</plugins>
 	</build>
-
+	<repositories>
+		<repository>
+	    <id>git-jebas476</id>
+	    <name>hawkrepo</name>
+	    <url>https://github.com/jebas476/hawk/raw/master/mavenrepo</url>
+		</repository>
+	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>org.testng</groupId>
