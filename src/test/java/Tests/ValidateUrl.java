@@ -2,7 +2,6 @@ package Tests;
 
 import java.io.IOException;
 
-import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,7 +11,6 @@ import ui_automation.hawk.TestBase;
 
 public class ValidateUrl extends TestBase {
 
-	protected WebDriver driver;
 	@BeforeTest
 	public void initialize() throws IOException {
 		initializeDriver();
