@@ -25,4 +25,9 @@
 			<class name="Tests.YahooValidateUrl" />
 		</classes>
 	</test>
+	<test name="Test5">
+		<classes>
+			<class name="Tests.ExcelDataDrivenCase" />
+		</classes>
+	</test>
 </suite> <!-- Suite -->
