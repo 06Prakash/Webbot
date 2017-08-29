@@ -33,7 +33,7 @@
 		<repository>
 	    <id>git-jebas476</id>
 	    <name>hawkrepo</name>
-	    <url>https://github.com/jebas476/hawk/raw/master/</url>
+	    <url>https://github.com/jebas476/hawk/raw/master/target</url>
 		</repository>
 	</repositories>
 	<dependencies>
