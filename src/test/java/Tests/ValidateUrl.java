@@ -13,7 +13,7 @@ public class ValidateUrl extends TestBase {
 
 	@BeforeTest
 	public void initialize() throws IOException {
-		driver = initializeDriver();
+		initializeDriver();
 		navigate_to_url(prop.getProperty("url"));
 	}
 

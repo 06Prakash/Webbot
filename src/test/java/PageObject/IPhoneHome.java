@@ -8,6 +8,7 @@ import ui_automation.hawk.PageObjectBase;
 public class IPhoneHome extends PageObjectBase {
 
 	public String iphoneimg = "src/test/java/resources/iphone6.PNG";
+	public String buyImageButton = "src/test/java/resources/buyButton.PNG";
 
 	public IPhoneHome(WebDriver driver) {
 		this.driver = driver;

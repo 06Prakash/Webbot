@@ -15,6 +15,7 @@ public class LandingPage extends PageObjectBase {
 	public WebDriver driver;
 
 	By searchBox = By.id("lst-ib");
+	
 	By submit = By.name("btnK");
 	By searchButton = By.xpath(".//*[@value='Google Search']");
 	

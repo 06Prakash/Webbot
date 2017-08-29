@@ -2,6 +2,8 @@ package Tests;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -13,29 +15,32 @@ import ui_automation.hawk.TestBase;
 
 
 public class SikuliTest extends TestBase {
-//	public static Logger log = LogManager.getLogger(HomePage.class.getName());
+	public static Logger log = LogManager.getLogger(SikuliTest.class.getName());
 
 
 	@BeforeTest
 	public void initialize() throws IOException
 	{
-		 driver = initializeDriver();
+		 initializeDriver();
 		 navigate_to_url("https://www.apple.com/in/iphone/");
 	}
 	
 	@Test
-	public void basePageNavigation() throws IOException, InterruptedException {
+	public void applePageNavigation() throws IOException, InterruptedException {
 		IPhoneHome iphonehome = new IPhoneHome(driver);
 
 		Assert.assertEquals("iPhone", iphonehome.getPageHeader());
 		// click the iphone6 image		
 		iphonehome.clickImage(iphonehome.iphoneimg);
+		System.out.println(iphonehome.isImagePresent(iphonehome.buyImageButton));
+		log.info("Ensured that the next page and the button image has been processed and found");
+		Thread.sleep(5000);
+		
 	}
 	
 	@AfterTest
 	public void teardown() throws IOException {
-		// Take screen shots
-	
+		// Take screen shots	
 		driver.close();
 	}
 }
