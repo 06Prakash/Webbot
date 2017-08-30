@@ -3,14 +3,6 @@ addons:
   chrome: stable
 before_script:
   - sudo apt-get -qq update
-  - sudo apt-get install libavformat-dev
-  - sudo apt-get install avconv
-  - sudo apt-get install libcv2.1
-  - sudo apt-get install libcvaux2.1
-  - sudo apt-get install libhighgui2.1
-  - sudo apt-get install libcv-dev
-  - sudo apt-get install libcvaux-dev
-  - sudo apt-get install libhighgui-dev
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
